@@ -1,0 +1,25 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.fieldContainer {
+    margin-top: 20px;
+    width: 350px;
+    display: flex;
+}
+
+.submit {
+    margin-top: 20px;
+}
+
+.fieldContainer input {
+    margin-left: 20px;
+}
+
+.messageContainer {
+    margin-top: 50px;
+}
