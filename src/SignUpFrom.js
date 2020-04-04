@@ -11,7 +11,7 @@ class SignUpForm extends React.Component {
         confirmPassword: "",
       },
       noMatch: false,
-      formSubmitted: ''
+      formSubmitted: "",
     };
   }
 
@@ -25,7 +25,7 @@ class SignUpForm extends React.Component {
   };
 
   handleSubmit = (event) => {
-    this.setState({ formSubmitted: true})
+    this.setState({ formSubmitted: true });
     event.preventDefault();
   };
 
@@ -45,18 +45,19 @@ class SignUpForm extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.formSubmitted ? (
-          <div className="messageContainer">
-            <span>User {this.state.form.username} created</span>
-          </div>
-        ) : null}
-        {this.state.noMatch ? (
-          <div className="messageContainer">
-            <span>Passwords must match</span>
-          </div>
-        ) : null}
-
         <form className="formContainer" onSubmit={this.handleSubmit}>
+          <h1>Sign up Form</h1>
+          {this.state.formSubmitted ? (
+            <div className="messageContainer">
+              <span>User {this.state.form.username} created</span>
+            </div>
+          ) : null}
+          {this.state.noMatch ? (
+            <div className="messageContainer">
+              <span>Passwords must match</span>
+            </div>
+          ) : null}
+
           <div className="fieldContainer">
             <label>
               Username:
